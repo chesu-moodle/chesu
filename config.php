@@ -52,3 +52,5 @@ $THEME->addblockposition = BLOCK_ADDBLOCK_POSITION_FLATNAV;
 $THEME->scss = function ($theme) {
     return theme_chesu_get_main_scss_content($theme);
 };
+
+$THEME->sheets = ['chesu'];
