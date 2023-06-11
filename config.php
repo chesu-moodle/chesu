@@ -46,3 +46,7 @@ $THEME->requiredblocks = '';
 // This is a feature that tells the blocks library not to use the "Add a block" block. We don't want this in boost based themes because
 // it forces a block region into the page when editing is enabled and it takes up too much room.
 $THEME->addblockposition = BLOCK_ADDBLOCK_POSITION_FLATNAV;
+
+$THEME->scss = function ($theme) {
+    return theme_chesu_get_main_scss_content($theme);
+};
