@@ -38,6 +38,8 @@ $THEME->yuicssmodules = array();
 // Most themes will use this rendererfactory as this is the one that allows the theme to override any other renderer.               
 $THEME->rendererfactory = 'theme_overridden_renderer_factory';
 
+$THEME->haseditswitch = true;
+
 // This is a list of blocks that are required to exist on all pages for this theme to function correctly. For example               
 // bootstrap base requires the settings and navigation blocks because otherwise there would be no way to navigate to all the        
 // pages in Moodle. Boost does not require these blocks because it provides other ways to navigate built into the theme.            
