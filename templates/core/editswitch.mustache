@@ -1,0 +1,31 @@
+<form action="{{{legacyseturl}}}" method="post" class="d-flex align-items-center editmode-switch-form">
+    <div class="input-group">
+        <label class="mr-2 mb-0 {{#checked}}text-primary{{/checked}}" for="{{uniqid}}-editingswitch">
+            {{#str}} editmode {{/str}}
+        </label>
+        <div class="custom-control custom-switch">
+            <input type="checkbox"{{!
+                }} name="setmode"{{!
+                }}{{#checked}}{{!
+                    }} checked{{!
+                }}{{/checked}}{{!
+                }} class="custom-control-input"{{!
+                }} id="{{uniqid}}-editingswitch"{{!
+                }} data-context="{{{pagecontextid}}}"{{!
+                }} data-pageurl="{{{pageurl}}}"{{!
+            }}>
+            <span class="custom-control-label">&nbsp;</span>
+        </div>
+    </div>
+    <input type="hidden" name="sesskey" value="{{{sesskey}}}">
+    <input type="hidden" name="pageurl" value="{{{pageurl}}}">
+    <input type="hidden" name="context" value="{{{pagecontextid}}}">
+    <noscript>
+        <input type="submit" value="{{#str}}setmode, core{{/str}}">
+    </noscript>
+</form>
+{{#js}}
+require(['core/edit_switch'], function(editSwitch) {
+    editSwitch.init('{{uniqid}}-editingswitch');
+});
+{{/js}}
